@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title> Caribbean Countries List </title>
+<
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+<div id="container">
+
+<h1>The Top 20 Most Populated Caribbean Countries</h1>
+
+<p>Learn which country makes up most of the West Indies</p>
+
+
+
+<ul>
+{% for pair in pairs %}
+
+        <li><a href="{{ url_for('island', id=pair[0]) }}">{{ pair[1] }}</a></li>
+
+
+{% endfor %}
+</ul>
+
+
+</div> <!-- close container -->
+
+</body>
+</html>
